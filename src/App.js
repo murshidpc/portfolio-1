@@ -43,19 +43,19 @@ function App() {
       </div>
       <LinearGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <MySkills />
+        <MySkills setSelectedPage={setSelectedPage} />
       </div>
       <LinearGradient />
       <div className="w-5/6 mx-auto">
-        <Projects />
+        <Projects setSelectedPage={setSelectedPage} />
       </div>
       <LinearGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Testimonials />
+        <Testimonials setSelectedPage={setSelectedPage} />
       </div>
       <LinearGradient />
       <div className="w-5/6 mx-auto md:h-full">
-        <Contact />
+        <Contact setSelectedPage={setSelectedPage} />
       </div>
       <div className="mx-auto md:h-full">
         <Footer />

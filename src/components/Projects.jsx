@@ -33,7 +33,7 @@ const Project = ({ title }) => {
   );
 };
 
-const Projects = () => {
+const Projects = ({ setSelectedPage }) => {
   return (
     <section id="projects" className="pt-48 pb-48">
       <motion.div
@@ -41,6 +41,7 @@ const Projects = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
+        onViewportEnter={() => setSelectedPage("projects")}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, y: -50 },

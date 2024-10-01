@@ -2,7 +2,7 @@ import LinearGradient from "./LinearGradient";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 
-const Contact = () => {
+const Contact = ({ setSelectedPage }) => {
   const {
     register,
     trigger,
@@ -23,6 +23,7 @@ const Contact = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
+        onViewportEnter={() => setSelectedPage("contacts")}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: 50 },

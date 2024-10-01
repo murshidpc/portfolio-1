@@ -1,7 +1,7 @@
 import LinearGradient from "./LinearGradient";
 import { motion } from "framer-motion";
 
-const Testimonials = () => {
+const Testimonials = ({ setSelectedPage }) => {
   const commonStyle = `relative h-[350px] md:w-1/3 mt-32 before:absolute before:-top-[120px] before:-ml-[110px] before:left-1/2 flex flex-col justify-end p-16`;
 
   return (
@@ -12,6 +12,7 @@ const Testimonials = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
+        onViewportEnter={() => setSelectedPage("testimonials")}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: -50 },

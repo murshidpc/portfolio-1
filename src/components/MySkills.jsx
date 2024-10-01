@@ -2,7 +2,7 @@ import MediaQuery from "../hooks/useMediaQuery";
 import LinearGradient from "./LinearGradient";
 import { motion } from "framer-motion";
 
-const MySkills = () => {
+const MySkills = ({ setSelectedPage }) => {
   const isAboveMediumScreens = MediaQuery("(min-width: 1060px)");
 
   return (
@@ -14,6 +14,7 @@ const MySkills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
+          onViewportEnter={() => setSelectedPage("skills")}
           transition={{ duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
